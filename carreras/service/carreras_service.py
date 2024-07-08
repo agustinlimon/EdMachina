@@ -18,7 +18,7 @@ def ver_carreras(db: db_dependency, nombre: str):
             nombre=car.nombre, 
         )
         carreras_filtradas.append(car)
-    return sorted(carreras_filtradas, key=lambda x: x.nombre, reverse=True)
+    return sorted(carreras_filtradas, key=lambda x: x.nombre)
 
 
 def crear_carrera(db: db_dependency, carrera: Carreras_create):
