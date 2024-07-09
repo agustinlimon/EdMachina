@@ -5,7 +5,8 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.ext.declarative import declarative_base
 
 #* Conexion a la base de datos
-engine = create_engine("postgresql://postgres:admin@localhost:5432/EdMachina")
+DATABASE_URL = "postgresql://postgres:admin@db:5432/EdMachina"
+engine = create_engine(DATABASE_URL)
 session_local = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 Base = declarative_base()
 
