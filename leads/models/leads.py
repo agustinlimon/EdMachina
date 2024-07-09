@@ -10,10 +10,11 @@ class Leads(Base):
     __tablename__='leads'
     
     id = Column(Integer, primary_key=True, index=True)
-    id_persona = Column(Integer, ForeignKey('personas.id', ondelete='CASCADE'))
+    leg_persona = Column(Integer, ForeignKey('personas.legajo', ondelete='CASCADE'))
     id_materia = Column(Integer, ForeignKey('materias.id', ondelete='CASCADE'))
     id_carrera = Column(Integer, ForeignKey('carreras.id', ondelete='CASCADE'))
     anio = Column(Integer)
+    cantidad_veces = Column(Integer)
 
     persona = relationship('Personas', backref='personas')
     materia = relationship('Materias', backref='materias')

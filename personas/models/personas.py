@@ -7,7 +7,7 @@ class Personas(Base):
     legajo = Column(Integer, primary_key=True, index=True)
     nombre = Column(String)
     apellido = Column(String)
-    dni = Column(Integer)
+    dni = Column(Integer, unique=True)
     email = Column(String)
     direccion = Column(String)
     telefono = Column(BigInteger)

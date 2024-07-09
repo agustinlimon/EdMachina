@@ -5,11 +5,11 @@ from personas.models.personas import Personas
 from personas.schemas.personas import Personas_output, Personas_create
 
 def ver_personas(
-        db: db_dependency, 
-        nombre: str,
-        apellido: str,
-        dni: int
-    ):
+    db: db_dependency, 
+    nombre: str,
+    apellido: str,
+    dni: int
+):
     query = db.query(Personas)
 
     if nombre:

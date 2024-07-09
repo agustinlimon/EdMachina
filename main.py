@@ -4,12 +4,14 @@ from db import create_tables
 from carreras.controller.carreras_controller import router_carreras
 from materias.controller.materias_controller import router_materias
 from personas.controller.personas_controller import router_personas
+from leads.controller.leads_controller import router_leads
 
 #* Creacion de la aplicacion
 app = FastAPI()
 app.include_router(router_carreras)
 app.include_router(router_materias)
 app.include_router(router_personas)
+app.include_router(router_leads)
 
 #* Creacion de las tablas en la base de datos
 create_tables()
